@@ -2,29 +2,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "zlib",
+    name: "czlib",
     products: [
-        .library(name: "zlib", targets: ["zlib"]),
+        .library(name: "czlib", targets: ["czlib"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ProfDrLuigi/CZlib/czlib.git", from: "1.2.11")
     ],
     targets: [
         .target(
-            name: "zlib",
+            name: "Czlib",
             dependencies: ["Czlib"]
         ),
         .target(
-            name: "zlib-example",
-            dependencies: ["zlib"]
+            name: "czlib-example",
+            dependencies: ["czlib"]
         ),
         .target(
             name: "Czlib",
             dependencies: []
         ),
         .testTarget(
-            name: "zlibTests",
-            dependencies: ["zlib"]
+            name: "czlibTests",
+            dependencies: ["czlib"]
         ),
     ]
 )
